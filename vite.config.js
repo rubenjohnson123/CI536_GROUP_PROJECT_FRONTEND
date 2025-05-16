@@ -14,7 +14,7 @@ export default defineConfig({
         messages: path.resolve(__dirname, 'src/messages_page/messages.html'),
         about: path.resolve(__dirname, 'src/about_page/about.html'),
         contact: path.resolve(__dirname, 'src/contact_page/contact.html'),
-        item_details: path.resolve(__dirname, 'src/item_details_page/item_details.html'),
+        item_details: path.resolve(__dirname, 'src/item_details_page/item_detail.html'),
         TandC: path.resolve(__dirname, 'src/TandC/termsandconditions.html'),
         login: path.resolve(__dirname, 'src/login_page/login.html'),
       }
