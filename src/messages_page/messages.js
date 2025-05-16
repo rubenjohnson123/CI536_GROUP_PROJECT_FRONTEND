@@ -1,5 +1,7 @@
 import { io } from 'socket.io-client'; // Import Socket.IO client
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 document.addEventListener("DOMContentLoaded", () => {
     const socket = io(`${API_URL}`);  
     console.log("hi");

@@ -4,6 +4,8 @@ const container = document.getElementById("item-container");
 
 const userId = localStorage.getItem("userId");
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 if (!itemId) {
   container.innerHTML = "<p>No item ID provided.</p>";
 } else {

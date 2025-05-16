@@ -1,5 +1,7 @@
 // Removed import of CSS because it's inline in HTML or should be linked separately
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 const token = localStorage.getItem("token");
 
 if (!token) {

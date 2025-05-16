@@ -11,6 +11,8 @@
 
 // });
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contact-form');
 

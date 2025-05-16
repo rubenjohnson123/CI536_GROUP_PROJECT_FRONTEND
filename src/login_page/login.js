@@ -1,5 +1,7 @@
 import './login.css';
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 document.getElementById("login-form").addEventListener("submit", async (e) => {
     e.preventDefault();
     const email = document.getElementById("login-email").value;
