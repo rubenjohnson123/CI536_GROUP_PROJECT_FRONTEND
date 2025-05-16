@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/src/assets/Logo_clear.png"> <!-- Tab icon -->
+    <link rel="stylesheet" href="./src/main.css"> <!-- Link CSS-->
+    <title>Marketplace</title>
+  </head>
+  <body>
+    <!-- Header with three separate divs. -->
+    <header class="header" id="main-header">
+      <!-- 1. main site navigation bar. -->
+      <div class= "nav" id="top-nav">        
+        <ul id="top-nav-left-ul">
+          <li><button class="button" id="login-logout-button">Login</button></li>
+          <li><a href="http://localhost:5173/src/add_item_page/add_item.html">Sell</a></li>
+          <li><a href="http://localhost:5173/src/profi_page/prof.html">Profile</a></li>
+        </ul>
+
+        <ul id="top-nav-right-ul">
+          <li><a href="http://localhost:5173/src/messages_page/messages.html">Messages</a></li>
+          <li><a href="http://localhost:5173/src/help_page/help.html">Help</a></li>
+          <li><a href="http://localhost:5173/src/about_page/about.html">About us</a></li>
+          <li><a href="http://localhost:5173/src/TandC/termsAndConditions.html">T&C</a></li>
+          <li><a href="http://localhost:5173/src/contact_page/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <!-- 2. search bar -->
+      <div class= "nav search-nav" id="search-nav">
+        <div class="search-bar-logo">
+          <img src="./src/assets/Logo_clear.png" alt="logo" class="logo" id="nav-logo">
+          <button class="button" id="open-menu-button"><img id="hamburger-icon" src="./src/assets/menu-icon.png" alt="hamburger-menu-button"></button>
+        </div>
+        <div class="search-bar">
+          <input type="text" id="search-term" placeholder="What are you looking for?">
+          <button type="submit" class="button" id="search-button">Search</button>
+        </div>
+      </div>
+      <!-- 3. item category navigation bar -->
+      <div class= "nav" id="category-nav">
+        <ul>
+          <li><a class="category-links" href="#">Academic & Study Materials</a></li>
+          <li><a class="category-links" href="#">Books</a></li>
+          <li><a class="category-links" href="#">Electronics & Gadgets</a></li>
+          <li><a class="category-links" href="#">Fashion & Clothing</a></li>
+          <li><a class="category-links" href="#">Food & Groceries</a></li>
+          <li><a class="category-links" href="#">Gaming</a></li>
+          <li><a class="category-links" href="#">Health & Beauty</a></li>
+          <li><a class="category-links" href="#">Home & Accommodation Essentials</a></li>
+          <li><a class="category-links" href="#">Miscellaneous</a></li>
+          <li><a class="category-links" href="#">Sports & Outdoor</a></li>
+        </ul>
+      </div>
+    </header>
+    
+    <!-- Hidden hamburger menu -->
+    <nav class="ham-menu hidden" id="off-screen-menu">
+      <button class="button" id="close-menu-button">Close</button>
+      <ul class="menu-list" id="main-menu">
+        <li><button class="button" id="login-logout-button">Login</button></li>
+        <li><a href="http://localhost:5173/src/add_item_page/add_item.html">Sell</a></li>
+        <li><a href="http://localhost:5173/src/profi_page/prof.html">Profile</a></li>
+        <li><a href="http://localhost:5173/src/messages_page/messages.html">Messages</a></li>
+        <li><a href="http://localhost:5173/src/help_page/help.html">Help</a></li>
+        <li><a href="http://localhost:5173/src/about_page/about.html">About us</a></li>
+        <li><a href="http://localhost:5173/src/TandC/termsAndConditions.html">T&C</a></li>
+        <li><a href="http://localhost:5173/src/contact_page/contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main page body -->
+    <main id="main">
+      <!-- Separate category boxes -->
+      <div class="container" id="item-box-container">
+        <div class="item-box">
+          <h2><a href="#">Gaming</a></h2>
+          <div class="item-container" id="gaming-container"></div>
+        </div>
+        <div class="item-box">
+          <h2><a href="#">Fashion & Clothing</a></h2>
+          <div class="item-container" id="fashion-and-clothing-container"></div>
+        </div>
+        <div class="item-box">
+          <h2><a href="#">Books</a></h2>
+          <div class="item-container" id="books-container"></div>
+        </div>
+        <div class="item-box">
+          <h2><a href="#">Food & Groceries</a></h2>
+          <div class="item-container" id="food-and-groceries-container"></div>
+        </div>
+      </div>
+
+      <div>
+        <h1 id="category-heading">All Categories</h1>
+      </div>
+      <div id="item-container">
+      </div>
+    </main>
+
+    <div class="loader"></div>
+
+    <footer class="footer">
+      <ul>
+        <li><a>Contact Us</a></li>
+        <li><a>Terms and Conditions</a></li>
+        <li><a>Privacy Policy</a></li>
+      </ul>
+    </footer>
+
+    <button id="chatbot-icon">💬</button>
+
+    <div id="chat-window" style="display: none">
+      <div id="chat-log"></div>
+      <div id="chat-input">
+        <input
+          type="text"
+          id="user-message"
+          placeholder="Ask a question"
+          aria-label="Chat message input"
+        />
+        <button id="send-btn" aria-label="Send message">Send</button>
+      </div>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="icon" type="image/x-icon" href="/src/assets/Logo_clear.png">
+      <link rel="stylesheet" href="./login.css">
+      <title>Marketplace</title>
+    </head>
+    <body>
+      <img src="../assets/Logo_clear.png" alt="logo" class="logo" id="logo">
+<h1> Sign Up / Log In</h1>
+      <div id="form-box">
+        <form id="register-form" class="auth-form hidden">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit" class="button" id="register-button">Sign Up</button>
+            <p>Already registered? <a id="switch-link-register" href="#">Login here!</a></p>
+        </form>
+              
+        <form id="login-form" class="auth-form">
+          <input type="email" id="login-email" placeholder="Email" required>
+          <input type="password" id="login-password" placeholder="Password" required>
+          <button type="submit" class="button" id="login-button">Login</button>
+          <p>Not got an account? <a id="switch-link-login" href="#">Sign up here!</a></p>
+        </form>
+      </div>
+      
+      <script type="module" src="./login.js"></script>
+    </body>
+</html>

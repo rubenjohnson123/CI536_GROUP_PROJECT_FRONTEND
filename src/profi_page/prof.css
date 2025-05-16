@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+
+:root {
+  --primary-color: #0eafec;   /* Light Blue */
+  --secondary-color: #ff0298; /* Pink */
+  --accent-color: #efdb2d;    /* Yellow */
+  --background-color: #fffefe;
+  --text-color: #333;         /* Dark Gray for text */
+  --text-color-2: #6c6c6c;    /* Light Gray for secondary text */
+  --font-family: "Special Gothic Expanded One", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+/* Container layout */
+#container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+/* Navigation Panel */
+#nav {
+  width: 220px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 20px;
+}
+
+#nav h2 {
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+#nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+#nav ul li {
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#nav ul li:hover {
+  color: var(--accent-color);
+}
+
+/* Profile Panel */
+#profile-panel {
+  flex: 1;
+  padding: 40px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+  border: 2px solid var(--text-color-2);
+}
+
+.profile-info img {
+  border-radius: 50%;
+  margin-right: 20px;
+  width: 100px;
+  height: 100px;
+}
+
+.profile-info p {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Listings and Saved Items */
+#profile-panel > div {
+  margin-bottom: 20px;
+}
+
+#profile-panel p {
+  color: var(--text-color-2);
+}
+.hidden {
+    display: none;
+  }

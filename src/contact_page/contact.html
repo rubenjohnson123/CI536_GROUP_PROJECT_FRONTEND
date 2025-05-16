@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+     <head>
+		<meta charset="utf-8">
+		<title>Contact</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="/src/assets/Logo_clear.png">
+        <link rel="stylesheet" href="./contact.css">
+		
+	 </head>
+<body>
+
+     <img src="../assets/Logo_clear.png" alt="logo" class="logo" id="logo">
+        
+    <div id="form-box">
+        <form id="contact-form" class="auth-form">
+
+            <input type="firstname" id="firstname" placeholder="Firstname" required>
+            <input type="surname" id="surname" placeholder="Surname" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="message" id="message" placeholder="Message" required>
+
+        <p>Would you like us to contact you with more information?</p>
+            
+        <div class="more_info">
+            <input type="radio" type="radio" name="information" value="yes" id="no" />
+            <label for="information-yes">Yes</label>
+            <input type="radio" type="radio" name="information" value="no" id="no" />
+            <label for="information-no">N o</label>
+        </div>
+
+            <button type="submit" class="button" id="send-button">Send</button>
+
+        </form>
+    </div>
+
+</div>
+
+<script src="contact.js"></script>
+
+</body>
+</html>

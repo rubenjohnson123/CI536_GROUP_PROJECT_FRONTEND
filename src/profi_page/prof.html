@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profile Page</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --primary-color: #0eafec;
+      --secondary-color: #ff0298;
+      --accent-color: #efdb2d;
+      --background-color: #fffefe;
+      --text-color: #333;
+      --text-color-2: #6c6c6c;
+      --font-family: "Special Gothic Expanded One", sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: var(--font-family);
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-family);
+      width: 99.75dvw;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    #container {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+    }
+
+    #nav {
+      width: 220px;
+      background-color: #fff;
+      color: #333;
+      padding: 20px;
+      box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    #nav img {
+      width: 150px;
+      height: auto;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+
+    #nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    #nav ul li {
+      color: #333;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    #nav ul li:hover {
+      color: var(--primary-color);
+    }
+
+    h1,
+    h2 {
+      color: #333;
+    }
+
+    #profile-panel {
+      flex: 1;
+      padding: 40px;
+    }
+
+    .profile-info {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    .profile-info img {
+      border-radius: 50%;
+      margin-right: 20px;
+      width: 100px;
+      height: 100px;
+    }
+
+    .button {
+      background-color: #008080;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #footer {
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    #footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    #footer ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    #footer ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    #footer ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      padding: 8px;
+      width: 90%;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    /* Container for saved items */
+    #saved-item-container {
+      margin-top: 10px;
+    }
+
+    .item-card-price {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background: #f9f9f9;
+    }
+
+    .item-image {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .item-title a {
+      font-weight: bold;
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    .item-title a:hover {
+      text-decoration: underline;
+    }
+
+    .item-description {
+      flex: 1;
+      font-size: 0.9rem;
+      color: var(--text-color-2);
+    }
+
+    .item-price {
+      font-weight: bold;
+      color: var(--secondary-color);
+      font-size: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="nav">
+      <img src="../assets/Logo_clear.png" alt="Logo" id="logo" />
+      <h2>Dashboard</h2>
+      <ul>
+        <li>Home</li>
+        <li>Items</li>
+        <li>Messages</li>
+        <li>Contact Us</li>
+        <li style="margin-top: 30px; color: tomato;">Logout</li>
+      </ul>
+    </div>
+
+    <div id="profile-panel">
+      <h1>My Profile</h1> <br />
+
+      <div id="profile-info" class="profile-info">
+        <img
+          src="../assets/profile_pic.svg"
+          alt="Profile Picture"
+          id="profile-image"
+        />
+        <div class="profile-details" id="profile-details">
+          <p>
+            <strong>Full Name:</strong> <span id="username"></span>
+          </p>
+          <br />
+          <p>
+            <strong>University Email:</strong> <span id="email"></span>
+          </p>
+          <br />
+          <p>
+            <strong>Contact Number:</strong> <span id="contact"></span>
+          </p>
+          <br />
+          <p>
+            <strong>Collection Point:</strong> <span id="collectionPoint"></span>
+          </p>
+          <br />
+          <button class="button" id="editProfileButton">Edit Profile</button>
+          <br />
+        </div>
+      </div>
+
+      <div class="edit-profile hidden" id="edit-profile">
+        <form class="profile-form" id="profile-form">
+          <label>Username:</label><br />
+          <input type="text" id="newFullName" /><br /><br />
+
+          <label>Email:</label><br />
+          <input type="email" id="newEmail" /><br /><br />
+
+          <label>Collection Point:</label><br />
+          <input type="text" id="newCollectionPoint" /><br /><br />
+
+          <button type="submit" class="button">Save Changes</button>
+        </form>
+      </div>
+
+      <div>
+        <h2>My Listings</h2>
+        <br />
+        <p>No listings available.</p>
+      </div>
+      <br />
+      <div>
+        <h2>Saved Items</h2>
+        <br />
+        <div id="saved-item-container">
+          <p>No saved items yet.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <ul>
+      <li><a href="/terms">Terms and Policies</a></li>
+      <li><a href="/buy">Buy an Item</a></li>
+      <li><a href="/sell">Sell an Item</a></li>
+      <li><a href="/help">Help/FAQs</a></li>
+      <li><a href="/report">Report an Issue</a></li>
+    </ul>
+  </footer>
+
+  <script src="prof.js" defer></script>
+</body>
+</html>

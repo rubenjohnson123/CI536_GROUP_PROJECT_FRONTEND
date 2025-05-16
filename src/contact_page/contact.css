@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+
+/* Root colors and font settings */
+:root {
+  --primary-color: #0eafec; /* Primary color */
+  --secondary-color: #ff0298; /* Secondary color */
+  --accent-color:  #efdb2d; /* Accent color */
+  --background-color: #fffefe; /* Background color */
+  --text-color: #333; /* Text color */
+  --text-color-2: #6c6c6c;
+  --font-family: "Special Gothic Expanded One", sans-serif; /* Default font family */
+}
+
+/* Universal selector for resetting some basic styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+/* HTML styles */
+html {
+  font-size: 1rem; /* Base font size */
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Body styles */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  width: 100vw;
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.button {
+  font-size: 1rem;
+  border: none;
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border-radius: 2rem;
+  padding: 1rem 1.7rem;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  text-align:center;
+  cursor: pointer;
+}
+
+.logo {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 10rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+#form-box {
+  background-color: var(--background-color);
+  margin: 2%;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.auth-form input {
+  border: 2px solid var(--accent-color);
+  outline: none;
+  color: var(--text-color);
+  width: 80%;
+  padding: 3%;
+  border-radius: 3rem;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 768px) {
+
+  .auth-form input {
+    width: 50%;
+    padding: 1.5%;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .auth-form input {
+    width: 40%;
+    padding: 1.2%;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 1568px) {
+
+  html {
+    font-size: 1.3rem;
+  }
+
+  .auth-form input {
+    width: 40%;
+    padding: 1%;
+    font-size: 0.8rem;
+  }
+
+  .hidden {
+    display: none;
+  }
+}

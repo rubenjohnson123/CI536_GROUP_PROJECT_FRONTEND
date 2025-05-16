@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sell an Item</title>
+    <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="./add_item.css" />
+  </head>
+  <body>
+    <img src="../assets/Logo_clear.png" alt="logo" class="logo" id="logo">
+    <main style="padding: 2rem">
+      <h1 style="text-align: center; margin-bottom: 2rem">Sell an Item</h1>
+      <form id="sellForm" class="form-container">
+        <div class="form-group">
+          <label for="itemImage"
+            >Image URL
+            <span style="color: gray; font-size: 0.9rem"
+              >(paste link to image)</span
+            ></label
+          >
+          <input
+            type="url"
+            id="itemImage"
+            name="itemImage"
+            placeholder="https://example.com/image.jpg"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="itemName">Item Name</label>
+          <input type="text" id="itemName" name="itemName" required />
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea
+            id="description"
+            name="description"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="price">Price (£)</label>
+          <input type="number" id="price" name="price" step="0.01" required />
+        </div>
+
+        <div class="form-group">
+          <label for="location">Location</label>
+          <input type="text" id="location" name="location" required />
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select id="category" name="category" required>
+            <option value="">--Select--</option>
+            <option value="Food & Groceries">Food & Groceries</option>
+            <option value="Academic & Study Materials">Academic & Study Materials</option>
+            <option value="Electronics & Gadgets">
+              Electronics and Gadgets
+            </option>
+            <option value="Books">Books</option>
+            <option value="Gaming">Gaming</option>
+            <option value="Fashion & Clothing">Fashion & Clothing</option>
+            <option value="Health & Beauty">Health & Beauty</option>
+            <option value="Home & Accommodation Essentials">
+              Home & Accommodation Essentials
+            </option>
+            <option value="Miscellaneous">Miscellaneous</option>
+            <option value="Sports & Outdoor">Sports & Outdoor</option>
+          </select>
+        </div>
+
+        <button type="submit" class="button" style="margin-top: 1rem">
+          Submit Listing
+        </button>
+      </form>
+    </main>
+
+    <script type="module" src="./add_item.js"></script>
+  </body>
+</html>

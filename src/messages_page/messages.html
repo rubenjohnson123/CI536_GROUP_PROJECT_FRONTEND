@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Messaging App</title>
+    <link rel="stylesheet" href="./messages.css" />
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+  </head>
+  <body>
+    <audio
+      id="sendAudio"
+      src="/frontend/src/mp3/happy-pop-2-185287.mp3"
+      preload="auto"
+    ></audio>
+
+    <div class="container">
+      <div class="contacts">
+        <img
+          src="/src/assets/Logo_clear.png"
+          alt="logo"
+          class="logo"
+          id="logo"
+        />
+        <h2>Contacts</h2>
+        <h2 id="loggedInUser">Logged in as ...</h2>
+        <h3>Search users...</h3>
+        <br />
+        <div class="profile_container"></div>
+
+        <input type="text" id="Search-User" placeholder="Search for users..." />
+        <ul class="contact-list"></ul>
+      </div>
+
+      <div class="chat">
+        <div class="chat-header">
+          <h2 id="chatHeader">Chat with [User]</h2>
+        </div>
+        <div class="chat-messages" id="messages"></div>
+        <div class="chat-input">
+          <input
+            type="text"
+            id="messageInput"
+            placeholder="Type a message..."
+          />
+          <button id="sendBtn">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./messages.js"></script>
+  </body>
+</html>
