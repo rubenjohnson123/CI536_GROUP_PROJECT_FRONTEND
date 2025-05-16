@@ -70,7 +70,7 @@ async function fetchSavedItems() {
   const userId = localStorage.getItem("userId");
 
   try {
-    const response = await fetch(`http://localhost:5000/api/users/${userId}/get`);
+    const response = await fetch(`${API_URL}/api/users/${userId}/get`);
     const items = await response.json();
 
     // If items is an object with an array property, adjust accordingly

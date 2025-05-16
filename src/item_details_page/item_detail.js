@@ -7,7 +7,7 @@ const userId = localStorage.getItem("userId");
 if (!itemId) {
   container.innerHTML = "<p>No item ID provided.</p>";
 } else {
-  fetch(`http://localhost:5000/api/items/${itemId}`)
+  fetch(`${API_URL}/api/items/${itemId}`)
     .then(res => {
       if (!res.ok) throw new Error("Item not found");
       return res.json();
@@ -40,7 +40,7 @@ if (!itemId) {
 
 async function getSeller(userId) {
   try {
-    const response = await fetch(`http://localhost:5000/api/users/${userId}`);
+    const response = await fetch(`${API_URL}/api/users/${userId}`);
     if (!response.ok) throw new Error("Seller not found");
     const user = await response.json();
     console.log(user);

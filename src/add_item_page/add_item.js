@@ -21,7 +21,7 @@ document.getElementById("sellForm").addEventListener("submit", async function (e
   };
 
   try {
-    const res = await fetch("http://localhost:5000/api/items", {
+    const res = await fetch(`${API_URL}/api/items`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newItem)

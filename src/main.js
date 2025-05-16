@@ -1,5 +1,7 @@
 import './main.css';
-import './chatbot.js'
+import './chatbot.js';
+
+const API_URL = import.meta.env.VITE_API_URL;
 
 window.addEventListener("load", () => {
     const loader = document.querySelector(".loader");
@@ -109,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function fetchItems() {
     try {
-        const response = await fetch("http://localhost:5000/api/items");
+        const response = await fetch(`${API_URL}/api/items`);
         const items = await response.json();
         items.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         displayItems(items);
@@ -215,7 +217,7 @@ function loadSavedItems() {
 
 async function saveItem(itemId, token, userId) {
     try {
-        const response = await fetch(`http://localhost:5000/api/users/${userId}/save`, {
+        const response = await fetch(`${API_URL}/api/users/${userId}/save`, {
             method: "POST",
             headers: { 
                 "Content-Type": "application/json", 
@@ -239,7 +241,7 @@ async function saveItem(itemId, token, userId) {
 
 async function removeSavedItem(itemId, token, userId) {
     try {
-        const response = await fetch(`http://localhost:5000/api/users/${userId}/remove`, {
+        const response = await fetch(`${API_URL}/api/users/${userId}/remove`, {
             method: "PUT",
             headers: { 
                 "Content-Type": "application/json", 
@@ -272,7 +274,7 @@ async function checkSavedItems() {
     }
 
     try {
-        const response = await fetch(`http://localhost:5000/api/users/${userId}/get`);
+        const response = await fetch(`${API_URL}/api/users/${userId}/get`);
         const savedItems = await response.json();
 
         saveButtons.forEach(button => {

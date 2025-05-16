@@ -1,7 +1,7 @@
 import { io } from 'socket.io-client'; // Import Socket.IO client
 
 document.addEventListener("DOMContentLoaded", () => {
-    const socket = io('http://localhost:5000');  
+    const socket = io(`${API_URL}`);  
     console.log("hi");
 
     const searchInput = document.getElementById('Search-User');
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         try {
-            const res = await fetch(`http://localhost:5000/api/users?q=${query}`);
+            const res = await fetch(`${API_URL}/api/users?q=${query}`);
             const users = await res.json();
             console.log(users);
 
