@@ -2,7 +2,7 @@ const token = localStorage.getItem('token');
 const userId = localStorage.getItem('userId');
 
 if (!token) {
-    window.location.href = 'http://localhost:5173/src/login_page/login.html';
+    window.location.href = './src/login_page/login.html';
 } else {
     console.log('User is authenticated');
 }
@@ -29,7 +29,7 @@ document.getElementById("sellForm").addEventListener("submit", async function (e
 
     if (res.ok) {
       alert("Item submitted successfully!");
-      window.location.href = "http://localhost:5173/src/profile_page/profile.html";
+      window.location.href = "./src/profile_page/profile.html";
     } else {
       alert("Failed to submit item.");
     }

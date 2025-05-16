@@ -42,12 +42,12 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         navButton.textContent = `Login`;
         navButton.addEventListener("click", () => {
-            window.location.href = "http://localhost:5173/src/login_page/login.html";
+            window.location.href = "./src/login_page/login.html";
         });
     }
 
     navLogo.addEventListener("click", () => {
-        window.location.href = "http://localhost:5173/src/index.html";
+        window.location.href = "./src/index.html";
     });
 
     searchInput.addEventListener("keypress", function(e) {
@@ -182,10 +182,10 @@ function displayItems(items) {
         itemsContainer.append(itemPriceCard);
 
         itemPriceCard.addEventListener('click', () => {
-            window.location.href = ('http://localhost:5173/src/item_details_page/item_detail.html?id='  + encodeURIComponent(item._id));
+            window.location.href = ('./src/item_details_page/item_detail.html?id='  + encodeURIComponent(item._id));
         });
         itemImageCard.addEventListener('click', () => {
-            window.location.href = ('http://localhost:5173/src/item_details_page/item_detail.html?id='  + encodeURIComponent(item._id));
+            window.location.href = ('./src/item_details_page/item_detail.html?id='  + encodeURIComponent(item._id));
         });
     });
 }

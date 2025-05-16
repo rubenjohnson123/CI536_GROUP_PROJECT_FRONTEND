@@ -18,7 +18,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
         localStorage.setItem("username", data.username);
         localStorage.setItem("email", data.email);
         localStorage.setItem("savedItems", data.savedItems);
-        window.location.href = "http://localhost:5173/index.html";
+        window.location.href = "./index.html";
     } else {
         alert("Login failed: " + data.error);
     }
@@ -40,7 +40,7 @@ document.getElementById("register-form").addEventListener("submit", async (e) =>
     const data = await response.json();
     if (response.ok) {
         alert("Registration successful!");
-        window.location.href = "http://localhost:5173/src/index.html"; // Redirect to login page
+        window.location.href = "./src/index.html"; // Redirect to login page
     } else {
         alert(data.error);
     }
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.getElementById("logo").addEventListener("click", () => {
-        window.location.href = "http://localhost:5173/src/index.html";
+        window.location.href = "./src/index.html";
     });
 });
   

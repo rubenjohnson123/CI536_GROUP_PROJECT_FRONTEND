@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   document.getElementById("logo").addEventListener("click", () => {
-    window.location.href = "http://localhost:5173/src/index.html";
+    window.location.href = "./src/index.html";
 
   });
 

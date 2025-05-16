@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const savedContacts = new Set(); 
 
     if (!currentUser) {
-        window.location.href = "http://localhost:5173/src/login_page/login.html";
+        window.location.href = "../src/login_page/login.html";
         return;
     }
 
