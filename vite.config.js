@@ -15,7 +15,7 @@ export default defineConfig({
         about: path.resolve(__dirname, 'src/about_page/about.html'),
         contact: path.resolve(__dirname, 'src/contact_page/contact.html'),
         item_details: path.resolve(__dirname, 'src/item_details_page/item_detail.html'),
-        TandC: path.resolve(__dirname, 'src/TandC/termsandconditions.html'),
+        TandC: path.resolve(__dirname, 'src/TandC/termsAndConditions.html'),
         login: path.resolve(__dirname, 'src/login_page/login.html'),
       }
     }
