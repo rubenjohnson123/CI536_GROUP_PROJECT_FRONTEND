@@ -2,8 +2,9 @@ import { defineConfig } from 'vite'
 import path from 'path'; 
 
 export default defineConfig({
+  root: './src',
   build: {
-    outDir: 'dist', // send build output to backend folder
+    outDir: '../dist', // send build output to backend folder
     emptyOutDir: true,
   },
   resolve: {
