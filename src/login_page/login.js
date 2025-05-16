@@ -40,7 +40,7 @@ document.getElementById("register-form").addEventListener("submit", async (e) =>
     const data = await response.json();
     if (response.ok) {
         alert("Registration successful!");
-        window.location.href = "./src/index.html"; // Redirect to login page
+        window.location.href = "./index.html"; // Redirect to login page
     } else {
         alert(data.error);
     }
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.getElementById("logo").addEventListener("click", () => {
-        window.location.href = "./src/index.html";
+        window.location.href = "./index.html";
     });
 });
   

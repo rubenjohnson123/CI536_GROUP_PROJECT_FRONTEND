@@ -12,7 +12,11 @@ export default defineConfig({
         add_item: path.resolve(__dirname, 'src/add_item_page/add_item.html'),
         profi: path.resolve(__dirname, 'src/profi_page/prof.html'),
         messages: path.resolve(__dirname, 'src/messages_page/messages.html'),
-        // Add other HTML pages similarly here
+        about: path.resolve(__dirname, 'src/about_page/about.html'),
+        contact: path.resolve(__dirname, 'src/contact_page/contact.html'),
+        item_details: path.resolve(__dirname, 'src/item_details_page/item_details.html'),
+        TandC: path.resolve(__dirname, 'src/TandC/termsandconditions.html'),
+        login: path.resolve(__dirname, 'src/login_page/login.html'),
       }
     }
   }

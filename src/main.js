@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLogo = document.getElementById("nav-logo");
     const itemBoxContainer = document.getElementById("item-box-container");
     const categoryHeading = document.getElementById("category-heading");
-    const sellItemLink = document.getElementById("sell-item-link");
     const categoryLinks = document.querySelectorAll(".category-links");
 
     if (!navButton) return;
@@ -42,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         navButton.textContent = `Login`;
         navButton.addEventListener("click", () => {
-            window.location.href = "./src/login_page/login.html";
+            window.location.href = "login_page/login.html";
         });
     }
 
@@ -182,10 +181,10 @@ function displayItems(items) {
         itemsContainer.append(itemPriceCard);
 
         itemPriceCard.addEventListener('click', () => {
-            window.location.href = ('./src/item_details_page/item_detail.html?id='  + encodeURIComponent(item._id));
+            window.location.href = ('item_details_page/item_detail.html?id='  + encodeURIComponent(item._id));
         });
         itemImageCard.addEventListener('click', () => {
-            window.location.href = ('./src/item_details_page/item_detail.html?id='  + encodeURIComponent(item._id));
+            window.location.href = ('item_details_page/item_detail.html?id='  + encodeURIComponent(item._id));
         });
     });
 }

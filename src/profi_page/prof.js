@@ -3,7 +3,7 @@
 const token = localStorage.getItem("token");
 
 if (!token) {
-  window.location.href = "./src/login_page/login.html";
+  window.location.href = "/login_page/login.html";
 } else {
   console.log("User is authenticated");
 }
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   document.getElementById("logo").addEventListener("click", () => {
-    window.location.href = "./src/index.html";
+    window.location.href = "/index.html";
   });
 
   // Optional: Add Edit Profile button toggle (basic)
