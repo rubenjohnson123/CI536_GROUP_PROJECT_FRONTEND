@@ -5,7 +5,7 @@ const API_URL = import.meta.env.VITE_API_URL;
 const token = localStorage.getItem("token");
 
 if (!token) {
-  window.location.href = "/login_page/login.html";
+  window.location.href = "src/login_page/login.html";
 } else {
   console.log("User is authenticated");
 }

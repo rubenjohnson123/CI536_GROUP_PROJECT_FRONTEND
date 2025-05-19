@@ -1,4 +1,4 @@
-import '/login.css';
+import './login.css';
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -20,7 +20,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
         localStorage.setItem("username", data.username);
         localStorage.setItem("email", data.email);
         localStorage.setItem("savedItems", data.savedItems);
-        window.location.href = "index.html";
+        window.location.href = "/index.html";
     } else {
         alert("Login failed: " + data.error);
     }
@@ -42,7 +42,7 @@ document.getElementById("register-form").addEventListener("submit", async (e) =>
     const data = await response.json();
     if (response.ok) {
         alert("Registration successful!");
-        window.location.href = "index.html"; // Redirect to login page
+        window.location.href = "/index.html"; // Redirect to login page
     } else {
         alert(data.error);
     }
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.getElementById("logo").addEventListener("click", () => {
-        window.location.href = "index.html";
+        window.location.href = "/index.html";
     });
 });
   

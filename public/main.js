@@ -1,5 +1,5 @@
 import './main.css';
-import './chatbot.js';
+import '/src/chatbot.js';
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -41,12 +41,12 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         navButton.textContent = `Login`;
         navButton.addEventListener("click", () => {
-            window.location.href = "login_page/login.html";
+            window.location.href = "src/login_page/login.html";
         });
     }
 
     navLogo.addEventListener("click", () => {
-        window.location.href = "./src/index.html";
+        window.location.href = "./index.html";
     });
 
     searchInput.addEventListener("keypress", function(e) {
