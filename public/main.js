@@ -1,5 +1,5 @@
 import './main.css';
-import 'src/chatbot.js';
+import '/src/chatbot.js';
 
 const API_URL = import.meta.env.VITE_API_URL;
 
