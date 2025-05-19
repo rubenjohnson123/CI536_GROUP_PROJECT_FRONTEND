@@ -17,6 +17,7 @@ export default defineConfig({
         item_details: path.resolve(__dirname, 'src/item_details_page/item_detail.html'),
         TandC: path.resolve(__dirname, 'src/TandC/termsAndConditions.html'),
         login: path.resolve(__dirname, 'src/login_page/login.html'),
+        assets: path.resolve(__dirname, 'src/assets'),
       }
     }
   }
